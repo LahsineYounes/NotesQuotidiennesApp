@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F6FA">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Titre de la note"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#2D3436"
+                android:layout_marginBottom="12dp"/>
+
+            <ImageView
+                android:id="@+id/photo_detail"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_photo_24"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contenu de la note"
+                android:textSize="16sp"
+                android:textColor="#636e72"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/reminder_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aucun rappel"
+                android:textColor="#fdcb6e"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp"/>
+
+            <Button
+                android:id="@+id/edit_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Modifier"
+                android:backgroundTint="#0984E3"
+                android:textColor="@android:color/white"
+                android:background="@drawable/rounded_button"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/delete_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Supprimer"
+                android:backgroundTint="#d63031"
+                android:textColor="@android:color/white"
+                android:background="@drawable/rounded_button"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

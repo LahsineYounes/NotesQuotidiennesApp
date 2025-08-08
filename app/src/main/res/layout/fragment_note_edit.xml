@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F6FA">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nouvelle Note"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#2D3436"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/photo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajouter Photo"
+            android:backgroundTint="#0984E3"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_button"/>
+
+        <ImageView
+            android:id="@+id/photo_preview"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_photo_24"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Titre"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="Contenu"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:gravity="top"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bordered_layout"
+            android:padding="12dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/reminder_button"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="@string/add_reminder_text"
+                android:textColor="@android:color/white"
+                android:background="@drawable/rounded_button"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAllCaps="false"/>
+
+            <TextView
+                android:id="@+id/reminder_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Aucun rappel"
+                android:textSize="20sp"
+                android:layout_weight="3"
+                android:paddingStart="6dp"
+                android:gravity="end"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Enregistrer"
+            android:backgroundTint="#00B894"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_button"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
